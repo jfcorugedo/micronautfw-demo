@@ -1,4 +1,4 @@
-package micronautfw.demo.dto;
+package micronautfw.demo.quotes.dto;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

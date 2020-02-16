@@ -4,7 +4,7 @@ import io.micronaut.http.HttpRequest;
 import io.micronaut.http.client.RxHttpClient;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.test.annotation.MicronautTest;
-import micronautfw.demo.dto.Quote;
+import micronautfw.demo.quotes.dto.Quote;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
@@ -25,7 +25,7 @@ public class QuotesResourceTest {
 
         assertAll(
             () -> assertEquals("2", quote.getId()),
-            () -> assertEquals("At the beginning I was listening but...", quote.getText())
+            () -> assertEquals("At the beginning I was listening but... - Davind 'flowers'", quote.getText())
         );
     }
 }
