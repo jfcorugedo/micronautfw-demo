@@ -8,6 +8,7 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
 import io.reactivex.Single;
 import lombok.RequiredArgsConstructor;
+import micronautfw.demo.aop.LogMethodCall;
 import micronautfw.demo.quotes.dto.Quote;
 
 
@@ -17,6 +18,7 @@ public class QuoteResource {
 
     private final QuoteDAO quoteDAO;
 
+    @LogMethodCall
     @Get(value = "{id}", produces = MediaType.APPLICATION_JSON)
     public Single<MutableHttpResponse<Quote>> getOne(@PathVariable("id") String id) {
 
